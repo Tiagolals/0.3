@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB0klEQVRYhe2VO0tcURSFP3zEsbXX1JE0g476A7SwCQSCYqsDgyCK8YFaKMI0WiSNf8DaX2AR0ELR+ABBGLBQRLDRgIJPFK/FWYfZHEVmkptCuKtb3zlnr8Nln30hUaJE70yzwEHA5oAHIAJOgZ7/FT6lkG3D9sUKwCJwJf8j7vAJFd4wbE/se7B3GfgcZ/j4K+E7YqPydXEGWo0paNOwTbFJ+Vr5leBspdb+WiOvhK+JTcungHuxFrFPwKFYBFwCHeWGd+vwb8NWxfLyNcCdWFqszQTncY17Kf+lnAtEwInxv8Tm5D8At2JNYq3yV0BVUO8ceCo1/KMK9cnn5H/KVwM3Ys1iGflrrQN0mpqDWq8v5QL12pwzrMuEX2s9I9Ysf4P7MgAzYtngAg2lXADgETgLWBXFQdMq1iR/a8L9wFo2Z/+IlaxOih08hWso31xt2pOWv8M1JLi5EOF6xqsg9rWcCwC0Axcm+Aj3xMA9uQj3BFNiQ2KrpoYf1QPlhlulgIqAraiwHzT98utmjx/Vg/8S/pb8+M3ycmbsig3FGdgILAWsV0G7hm2JDccZDjCvwmfAAsV/wp7Z439SI3GHe30Djim++3ywXsC9mkSJEr0fPQMYZJApzxnpNAAAAABJRU5ErkJggg=="
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!--CABEÇALHO------------------------->
+    <header class="header hidden-Cabeçalho">
+      <div class="logo">
+        <img
+          class="Logo"
+          src="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-icone-criativo-da-letra-g_474888-3738.jpg"
+        />
+      </div>
+      <p class="meio-texto">Impulsione seus projetos!</p>
+      <div class="direito-section">
+        <button class="signup-botão">Cadastrar Agora</button>
+      </div>
+    </header>
+
+    <main>
+      <!--PAGINA 1 (APRESENTAÇÃO)------------------------->
+      <section class="pag1">
+        <h1 class="H1slogan">Crie o Seu Novo Estilo Agora</h1>
+        <p class="Pdescrição">empresa designs</p>
+        <button class="BTNcomecar">Impulsione seus projetos!</button>
+
+        <div class="bolinhas">
+          <div class="bolinha"></div>
+          <div class="bolinha"></div>
+          <div class="bolinha"></div>
+          <div class="bolinha"></div>
+        </div>
+
+        <div class="blur blur1"></div>
+        <div class="blur blur2"></div>
+        <div class="blur blur3"></div>
+      </section>
+      <!--PAGINA 2 (CADASTRO)------------------------->
+      <section class="pag2">
+        <div class="esquerda">
+          <h1 class="H1pag2">Nome da Startup</h1>
+          <p class="P1pag2">
+            Design is the process of creating visual and functional elements to
+            communicate messages effectively. It involves understanding user
+            needs and applying creativity to solve problems. From typography to
+            color theory, every choice in design has a purpose, influencing how
+            users interact with a product.
+          </p>
+          <button class="GST">Get started</button>
+          <div class="cards-container">
+            <div class="card">
+              <h2>Bringing Ideas to Life</h2>
+              <p>
+                Our designers combine creativity and strategy to craft impactful
+                and effective visuals.
+              </p>
+            </div>
+            <div class="card">
+              <h2>Tailored Design Services</h2>
+              <p>
+                From branding to UI design, we create unique solutions that make
+                a lasting impression.
+              </p>
+            </div>
+          </div>
+
+          <div class="imagens">
+            <img
+              alt="A beautiful sunset view"
+              src="https://i.pinimg.com/736x/9e/dc/ee/9edcee6efb786d4483d050e962a0ceb7.jpg"
+            />
+            <img
+              alt="Scenic mountain landscape"
+              src="https://i.pinimg.com/736x/09/10/0d/09100d3aa42a1fe1899173301414cffa.jpg"
+            />
+            <img
+              alt="Vibrant city skyline at night"
+              src="https://i.pinimg.com/736x/b6/b0/a7/b6b0a7a74321d37b7e03169a84a2e303.jpg"
+            />
+            <img
+              alt="A peaceful beach at sunset"
+              src="https://i.pinimg.com/736x/99/3d/54/993d548560c26a9c0ae1907e39319581.jpg"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="pag3">
+        <h1>video</h1>
+      </section>
+      <section class="pag4"></section>
+      <section class="pag5"></section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      // JS PARA O HEADER SUMIR NA PAGINA 1
+      //
+      const header = document.querySelector(".header");
+      const pag2Section = document.querySelector(".pag2");
+
+      function checkScrollPosition() {
+        const pag2Top = pag2Section.offsetTop;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition >= pag2Top) {
+          header.classList.add("visible-Cabeçalho");
+          header.classList.remove("hidden-Cabeçalho");
+        } else {
+          header.classList.remove("visible-Cabeçalho");
+          header.classList.add("hidden-Cabeçalho");
+        }
+      }
+
+      window.addEventListener("scroll", checkScrollPosition);
+      // JS PARA A COLORAÇÃO NO GERAL DA PRIMEIRA PÁGINA
+      //
+      const bolinhas = document.querySelectorAll(".bolinha");
+      let index = 0;
+
+      function alternarBolinhas() {
+        bolinhas.forEach((b, i) => {
+          b.classList.remove(`ativa${i + 1}`);
+        });
+
+        bolinhas[index].classList.add(`ativa${index + 1}`);
+        document.body.setAttribute("data-cor", index + 1);
+
+        index = (index + 1) % bolinhas.length;
+      }
+
+      setInterval(alternarBolinhas, 3000);
+    </script>
+  </body>
+</html>
