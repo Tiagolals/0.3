@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -143,8 +143,8 @@ section {
 }
 
 .bolinha.ativa4 {
-  background-color: #32cd32;
-  box-shadow: 0 0 20px #32cd32;
+  background-color: #ff00aa;
+  box-shadow: 0 0 20px #ff00aa;
 }
 
 /* Blur /-----------------------------------------------------------------------------------*/
@@ -185,7 +185,7 @@ body[data-cor="3"] .blur {
   background-color: #ff4500;
 }
 body[data-cor="4"] .blur {
-  background-color: #32cd32;
+  background-color: #ff00aa;
 }
 
 /*Pagina 2 (pag 2)-----------------------------------------------------------------------------------*/
@@ -198,18 +198,15 @@ body[data-cor="4"] .blur {
 
 /* Seção Principal */
 .pag2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex; /* Usa flexbox para organizar os dois lados horizontalmente */
+  justify-content: space-between; /* Distribui os elementos horizontalmente */
+  align-items: flex-start; /* Alinha verticalmente pelo topo */
   padding: 2rem;
+  position: relative; /* Permite usar position: absolute nos filhos */
 }
 
 .esquerda {
-  width: 50%; /* Ajusta o lado esquerdo para ocupar metade da largura */
-}
-
-.direita {
-  width: 50%; /* Ajusta o lado direito para ocupar metade da largura */
+  width: 50%; /* Ocupa metade da largura */
 }
 
 /* Título e Parágrafo */
@@ -222,6 +219,12 @@ body[data-cor="4"] .blur {
   font-family: "Courier New", monospace;
   font-size: 1rem;
   margin-top: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.P1pag2:hover {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.06);
 }
 
 /* Botão */
@@ -237,9 +240,11 @@ body[data-cor="4"] .blur {
 }
 
 .GST:hover {
-  background-color: #4fd1c5;
-  color: #1d4440;
-  box-shadow: 0 0 20px #4fd1c5;
+  background-color: #256ae8;
+  color: #131424;
+  box-shadow: 0 0 10px #256ae8;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 /* Cards */
@@ -265,12 +270,13 @@ body[data-cor="4"] .blur {
   color: #718096;
 }
 
-/* Imagens */
+/* Imagens da parte esquerda*/
 .imagens {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Cria duas colunas iguais */
   gap: 1rem;
   margin-top: 2rem; /* Espaçamento vertical entre os cards e as imagens */
+  width: 50%; /* Ocupa metade da largura */
 }
 
 .imagens img {
@@ -284,6 +290,332 @@ body[data-cor="4"] .blur {
   transform: scale(1.1);
 }
 
+/* Banner da parte direita */
+.direita {
+  position: absolute;
+  top: 2rem; /* Ajuste para subir o banner */
+  right: 2rem; /* Ajuste para alinhar à direita */
+}
+
+.banner {
+  border-radius: 3rem;
+  max-width: 37vw; /* Define o tamanho máximo do banner em relação à largura da viewport */
+  height: auto; /* Mantém a proporção do banner */
+  margin-right: 5vw;
+}
+/* perguntas */
+.mensagens h1 {
+  margin: 5vh;
+}
+
+.mensagens textarea {
+  width: 100%;
+  height: 14.5vh;
+  padding: 10px;
+  border-radius: 10px;
+  resize: vertical; /* ou none, horizontal, etc */
+}
+
+.mensagens p {
+  margin-top: 4vh;
+  color: #131424;
+  font-family: "Courier New", monospace;
+}
+.enviar {
+  margin-top: 2rem;
+  background-color: #29292c;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-family: "FreeMono", monospace;
+  border-radius: 9999px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.enviar:hover {
+  background-color: #256ae8;
+  color: #131424;
+  box-shadow: 0 0 10px #215bc7;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+/*AREA DE CADASTRO*/
+/*meio-------------------------------*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.title {
+  font-size: 28px;
+  color: #29292c;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #29292c;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: #29292c;
+}
+
+.signin a:hover {
+  text-decoration: underline #4fd1c5;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: #4fd1c5;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: #29292c;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #29292c;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Meio 2 ------------------------------------------*/
+.form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.title2 {
+  font-size: 28px;
+  color: #29292c;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title2::before,
+.title2::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #29292c;
+}
+
+.title2::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title2::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message2,
+.signin2 {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin2 {
+  text-align: center;
+}
+
+.signin2 a {
+  color: #29292c;
+}
+
+.signin2 a:hover {
+  text-decoration: underline #29292c;
+}
+
+.flex2 {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form2 label {
+  position: relative;
+}
+
+.form2 label .input2 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form2 label .input2 + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form2 label .input2:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form2 label .input2:focus + span,
+.form2 label .input2:valid + span {
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form2 label .input2:valid + span {
+  color: #4fd1c5;
+}
+
+.submit2 {
+  border: none;
+  outline: none;
+  background-color: #29292c;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit2:hover {
+  background-color: #29292c;
+  cursor: pointer;
+}
+
+.form,
+.form2 {
+  border: solid 2px black;
+}
+
+input::placeholder {
+  color: transparent;
+}
 /*------------------PAG 3--------------*/
 
 .pag3 {
