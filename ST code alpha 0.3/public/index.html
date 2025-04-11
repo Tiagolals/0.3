@@ -278,6 +278,7 @@
         index = (index + 1) % bolinhas.length;
       }
       //JS para a area de CADSTRO (o formulario no caso)
+      //
       setInterval(alternarBolinhas, 3000);
 
       $(".Meio").hide();
@@ -310,7 +311,9 @@
       });
 
       //JS para CADSTRO e Login
+      //
       // Função para fazer login
+      //
       function loginUser(event) {
         event.preventDefault();
 
@@ -343,6 +346,7 @@
         .addEventListener("submit", loginUser);
 
       // Função para fazer Cadastro
+      //
       function registerUser(event) {
         event.preventDefault();
 
